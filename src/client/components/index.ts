@@ -11,5 +11,6 @@ export { default as SpinnerIcon } from './Spinners/SpinnerIcon'
 export { default as Modal } from './Modal/Modal'
 export { default as Json } from './Json'
 export { default as Toggle } from './Toggle'
-
+export { default as ThemeToggle } from './ThemeToggle'
+export * from './color'
 export { toast } from './Toast/toast'
