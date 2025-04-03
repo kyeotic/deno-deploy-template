@@ -1,14 +1,13 @@
 /* @refresh reload */
 import './index.css'
 import { render } from 'solid-js/web'
-import { auth0 } from './auth/auth0'
 import { AuthProvider } from './auth/AuthProvider'
 
 import App from './root/App'
 
 render(
   () => (
-    <AuthProvider client={auth0}>
+    <AuthProvider>
       <App />
     </AuthProvider>
   ),
