@@ -21,9 +21,7 @@ export default function Auth(props: ParentProps): JSX.Element {
           <Login />
         </Match>
         <Match when={store.hasInitialized && store.token}>
-          <TrpcProvider>
-            <StoresProvider>{props.children}</StoresProvider>
-          </TrpcProvider>
+          {props.children}
         </Match>
       </Switch>
     </>
