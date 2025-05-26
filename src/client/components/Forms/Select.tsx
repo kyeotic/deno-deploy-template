@@ -43,8 +43,8 @@ export default function Select(
     },
   })
 
-  function onChange(option: SelectOption) {
-    local.control.setValue(option.id)
+  function onChange(option: SelectOption | null) {
+    local.control.setValue(option?.id ?? null)
     setSelectedValue(option)
   }
 

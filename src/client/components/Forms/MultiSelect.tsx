@@ -30,7 +30,6 @@ export default function Select(
       .map((id) => props.options.find((o) => o.id === id))
       .filter((o) => o !== undefined),
   )
-  console.log('selectedValues', selectedValues())
 
   const selectProps = createOptions(() => props.options, {
     // extractText: (value: SelectOption) => {
