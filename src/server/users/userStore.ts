@@ -3,21 +3,11 @@ import { listAllValues, makeSet } from '../util/kv.ts'
 import { Token } from '@kyeotic/server'
 import config from '../config.ts'
 import { nanoid } from 'nanoid'
+import { User } from './types.ts'
 
 const USERS = makeSet('USERS')
 const EXT_ID = makeSet('EX_ID') // external identifier
 const AUTH0_SOURCE = 'auth0-kyeotek'
-
-export interface User {
-  id: string
-  displayName?: string
-  externalIds?: ExternalId[]
-}
-
-export interface ExternalId {
-  source: string
-  id: string
-}
 
 interface ExternalIdRef {
   userId: string
