@@ -4,9 +4,15 @@ import { requiredContext } from '../util/context'
 import { useTrpc } from './trpc'
 
 import { PlayerStore } from '../players/store'
+import { UserStore } from '../user/store'
 
 export interface Stores {
   players: PlayerStore
+  user: UserStore
+}
+
+interface AppData {
+  self: any
 }
 
 const { use: useStores, Provider: StoresProvider } = requiredContext<
@@ -14,8 +20,14 @@ const { use: useStores, Provider: StoresProvider } = requiredContext<
   ParentProps
 >('AppStores', (props) => {
   const trpc = useTrpc()
+  const appData = trpc.users.appData.query()
+
   return {
     players: new PlayerStore(trpc),
+    user: new UserStore(
+      trpc,
+      appData.then((d: AppData) => d.self),
+    ),
   } as Stores
 })
 

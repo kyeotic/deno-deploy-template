@@ -36,6 +36,7 @@
     "npm:@solidjs/router@~0.15.3": "0.15.3_solid-js@1.9.5__seroval@1.2.1",
     "npm:@tailwindcss/forms@~0.5.3": "0.5.10_tailwindcss@4.0.17",
     "npm:@tailwindcss/postcss@^4.0.17": "4.0.17",
+    "npm:@thednp/solid-color-picker@^0.0.14": "0.0.14_solid-js@1.9.5__seroval@1.2.1",
     "npm:@thisbeyond/solid-select@0.15": "0.15.0_solid-js@1.9.5__seroval@1.2.1",
     "npm:@trpc/client@11": "11.0.1_@trpc+server@11.0.1__typescript@5.8.2_typescript@5.8.2",
     "npm:@trpc/server@11": "11.0.1_typescript@5.8.2",
@@ -61,7 +62,6 @@
     "npm:url-join@5": "5.0.0",
     "npm:vite-plugin-solid@^2.11.6": "2.11.6_solid-js@1.9.5__seroval@1.2.1_vite@6.2.3_@babel+core@7.26.10",
     "npm:vite@^6.2.3": "6.2.3",
-    "npm:zod@^3.24.2": "3.24.2",
     "npm:zod@^3.25.48": "3.25.48"
   },
   "jsr": {
@@ -717,6 +717,28 @@
         "tailwindcss"
       ]
     },
+    "@thednp/color-picker@2.0.4": {
+      "integrity": "sha512-acxVg+2MdHm8y4gwxnmiY+Y5z25GTcs6FZuWbz6sjX1L+fLjN0aypDU/Es2OibPYwImkLmAzjGpybaDxrEadXQ==",
+      "dependencies": [
+        "@thednp/color",
+        "@thednp/shorty"
+      ]
+    },
+    "@thednp/color@1.0.14": {
+      "integrity": "sha512-MpzcLi2Jb9Xdi/ZbMgrJDxT0HQnZvceTr/t9BKO2A71vBDnPe2gsA6Tx0gYu5jiIagXbZtUwJqBDSLgmRpepew=="
+    },
+    "@thednp/shorty@2.0.11": {
+      "integrity": "sha512-D+rLHt1l7c608yCuzXYJ75aDNWeMVbor+m1HO/XibhiWRbCpD8r6TUv3ayJI+feVfCnBNfrH+p6LSDn9l99uBA=="
+    },
+    "@thednp/solid-color-picker@0.0.14_solid-js@1.9.5__seroval@1.2.1": {
+      "integrity": "sha512-tRwCUhwEypIhDsMLWnf9gx5W4rXFmlmG6iD6uWR6i9LYfCENdYoMx97BlSqdvhLyPDTJ0hCD4kHRt65Isef4qw==",
+      "dependencies": [
+        "@thednp/color",
+        "@thednp/color-picker",
+        "@thednp/shorty",
+        "solid-js"
+      ]
+    },
     "@thisbeyond/solid-select@0.15.0_solid-js@1.9.5__seroval@1.2.1": {
       "integrity": "sha512-L3QnA5vm09JWNqLR4QqEIi7cgfs9/1sJbFjyEnPskjKpxEvb4G+Iy5cyd1qhZ2vAIZ9vaLd3udts3kefayPsMg==",
       "dependencies": [
@@ -1213,9 +1235,6 @@
     "yallist@3.1.1": {
       "integrity": "sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g=="
     },
-    "zod@3.24.2": {
-      "integrity": "sha512-lY7CDW43ECgW9u1TcT3IoXHflywfVqDYze4waEz812jR/bZ8FHDsl7pFQoSZTz5N+2NqRXs8GBwnAwo3ZNxqhQ=="
-    },
     "zod@3.25.48": {
       "integrity": "sha512-0X1mz8FtgEIvaxGjdIImYpZEaZMrund9pGXm3M6vM7Reba0e2eI71KPjSCGXBfwKDPwPoywf6waUKc3/tFvX2Q=="
     }
@@ -1236,7 +1255,7 @@
       "npm:nanoid@^5.1.5",
       "npm:superjson@^2.2.2",
       "npm:url-join@5",
-      "npm:zod@^3.24.2"
+      "npm:zod@^3.25.48"
     ],
     "packageJson": {
       "dependencies": [
@@ -1246,6 +1265,7 @@
         "npm:@solidjs/router@~0.15.3",
         "npm:@tailwindcss/forms@~0.5.3",
         "npm:@tailwindcss/postcss@^4.0.17",
+        "npm:@thednp/solid-color-picker@^0.0.14",
         "npm:@thisbeyond/solid-select@0.15",
         "npm:@trpc/client@11",
         "npm:@trpc/server@11",

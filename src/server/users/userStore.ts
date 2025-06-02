@@ -84,6 +84,8 @@ export default class UserStore {
     const dbUser = await this.getByExternalIdentifier(AUTH0_SOURCE, externalId)
     if (dbUser) return dbUser
 
+    console.log('creating new user')
+
     const newUser: User = {
       id: nanoid(),
       externalIds: [{ source: AUTH0_SOURCE, id: externalId }],

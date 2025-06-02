@@ -11,7 +11,7 @@ export const userRouter = router({
    * Returns all data needed for initial app state.
    */
   appData: authProcedure.query(async ({ ctx }) => {
-    const [self, groups, friends, requests] = await Promise.all([
+    const [self] = await Promise.all([
       ctx.stores.users.get(ctx.user.id),
       // ctx.stores.groups.getByUser(ctx.user.id),
       // ctx.stores.friends.getFriends(ctx.user.id),
@@ -19,9 +19,9 @@ export const userRouter = router({
     ])
     return {
       self: self!,
-      groups,
-      friends,
-      requests,
+      // groups,
+      // friends,
+      // requests,
     }
   }),
   updateProfile: authProcedure

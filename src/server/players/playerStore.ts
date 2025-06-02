@@ -1,4 +1,4 @@
-import { listAllValues, create, makeSet } from '../util/kv.ts'
+import { listAllValues, create, makeSet } from '@kyeotic/server/kv'
 import { Player } from './types.ts'
 
 const PLAYERS = makeSet('PLAYERS')

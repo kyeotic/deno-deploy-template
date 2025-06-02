@@ -25,7 +25,7 @@
     "nanoid": "npm:nanoid@^5.1.5",
     "superjson": "npm:superjson@^2.2.2",
     "url-join": "npm:url-join@^5.0.0",
-    "zod": "npm:zod@^3.24.2"
+    "zod": "npm:zod@^3.25.48"
   },
   "deploy": {
     "project": "kyeotic-APP_NAME",

@@ -27,6 +27,7 @@
     "@solid-primitives/map": "^0.6.0",
     "@solidjs/router": "^0.15.3",
     "@std/ulid": "npm:@jsr/std__ulid@1.0.0-rc.4",
+    "@thednp/solid-color-picker": "^0.0.14",
     "@thisbeyond/solid-select": "^0.15.0",
     "@trpc/client": "^11.0.0",
     "classnames": "^2.3.2",
@@ -44,5 +45,6 @@
   },
   "engines": {
     "node": ">=16"
-  }
+  },
+  "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977"
 }

@@ -20,6 +20,9 @@ importers:
       '@std/ulid':
         specifier: npm:@jsr/std__ulid@1.0.0-rc.4
         version: '@jsr/std__ulid@1.0.0-rc.4'
+      '@thednp/solid-color-picker':
+        specifier: ^0.0.14
+        version: 0.0.14(solid-js@1.9.5)
       '@thisbeyond/solid-select':
         specifier: ^0.15.0
         version: 0.15.0(solid-js@1.9.5)
@@ -60,8 +63,8 @@ importers:
         specifier: ^5.0.0
         version: 5.0.0
       zod:
-        specifier: ^3.24.2
-        version: 3.24.2
+        specifier: ^3.25.48
+        version: 3.25.48
     devDependencies:
       '@tailwindcss/forms':
         specifier: ^0.5.3
@@ -563,6 +566,22 @@ packages:
   '@tailwindcss/postcss@4.0.17':
     resolution: {integrity: sha512-qeJbRTB5FMZXmuJF+eePd235EGY6IyJZF0Bh0YM6uMcCI4L9Z7dy+lPuLAhxOJzxnajsbjPoDAKOuAqZRtf1PQ==}
 
+  '@thednp/color-picker@2.0.4':
+    resolution: {integrity: sha512-acxVg+2MdHm8y4gwxnmiY+Y5z25GTcs6FZuWbz6sjX1L+fLjN0aypDU/Es2OibPYwImkLmAzjGpybaDxrEadXQ==}
+
+  '@thednp/color@1.0.14':
+    resolution: {integrity: sha512-MpzcLi2Jb9Xdi/ZbMgrJDxT0HQnZvceTr/t9BKO2A71vBDnPe2gsA6Tx0gYu5jiIagXbZtUwJqBDSLgmRpepew==}
+
+  '@thednp/shorty@2.0.11':
+    resolution: {integrity: sha512-D+rLHt1l7c608yCuzXYJ75aDNWeMVbor+m1HO/XibhiWRbCpD8r6TUv3ayJI+feVfCnBNfrH+p6LSDn9l99uBA==}
+    engines: {node: '>=16', pnpm: '>=8.6.0'}
+
+  '@thednp/solid-color-picker@0.0.14':
+    resolution: {integrity: sha512-tRwCUhwEypIhDsMLWnf9gx5W4rXFmlmG6iD6uWR6i9LYfCENdYoMx97BlSqdvhLyPDTJ0hCD4kHRt65Isef4qw==}
+    engines: {node: '>=18', pnpm: '>=8.6.0'}
+    peerDependencies:
+      solid-js: ^1.6.0
+
   '@thisbeyond/solid-select@0.15.0':
     resolution: {integrity: sha512-L3QnA5vm09JWNqLR4QqEIi7cgfs9/1sJbFjyEnPskjKpxEvb4G+Iy5cyd1qhZ2vAIZ9vaLd3udts3kefayPsMg==}
     engines: {node: '>=18.0.0', pnpm: '>=9.0.0'}
@@ -970,8 +989,8 @@ packages:
   yallist@3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==}
 
-  zod@3.24.2:
-    resolution: {integrity: sha512-lY7CDW43ECgW9u1TcT3IoXHflywfVqDYze4waEz812jR/bZ8FHDsl7pFQoSZTz5N+2NqRXs8GBwnAwo3ZNxqhQ==}
+  zod@3.25.48:
+    resolution: {integrity: sha512-0X1mz8FtgEIvaxGjdIImYpZEaZMrund9pGXm3M6vM7Reba0e2eI71KPjSCGXBfwKDPwPoywf6waUKc3/tFvX2Q==}
 
 snapshots:
 
@@ -1336,6 +1355,22 @@ snapshots:
       postcss: 8.5.3
       tailwindcss: 4.0.17
 
+  '@thednp/color-picker@2.0.4':
+    dependencies:
+      '@thednp/color': 1.0.14
+      '@thednp/shorty': 2.0.11
+
+  '@thednp/color@1.0.14': {}
+
+  '@thednp/shorty@2.0.11': {}
+
+  '@thednp/solid-color-picker@0.0.14(solid-js@1.9.5)':
+    dependencies:
+      '@thednp/color': 1.0.14
+      '@thednp/color-picker': 2.0.4
+      '@thednp/shorty': 2.0.11
+      solid-js: 1.9.5
+
   '@thisbeyond/solid-select@0.15.0(solid-js@1.9.5)':
     dependencies:
       solid-js: 1.9.5
@@ -1689,4 +1724,4 @@ snapshots:
 
   yallist@3.1.1: {}
 
-  zod@3.24.2: {}
+  zod@3.25.48: {}

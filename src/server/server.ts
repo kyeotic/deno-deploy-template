@@ -6,11 +6,13 @@ import { createAppContext } from './context.ts'
 import config from './config.ts'
 
 import { playerRouter } from './players/routes.ts'
+import { userRouter } from './users/userRoutes.ts'
 
 const staticDir = joinDir(import.meta.url, config.distDir)
 
 const appRouter = router({
   players: playerRouter,
+  users: userRouter,
 })
 
 // Export type router type signature,
